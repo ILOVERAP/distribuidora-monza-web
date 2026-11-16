@@ -269,6 +269,10 @@ footer p{margin:0 0 8px}
 .pcard:hover{box-shadow:0 24px 40px -30px rgba(10,42,76,.5);border-color:var(--cafe)}
 .pcard[hidden]{display:none}
 .pc-top{display:flex;gap:18px;align-items:center}
+.pimg{width:104px;height:104px;flex:none;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--linea)}
+.pimg img{width:100%;height:100%;display:block}
+.pimg.saco img{object-fit:contain;padding:4px}
+.pimg.foto img{object-fit:cover}
 .pcard .pico{width:76px;height:76px;flex:none;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,var(--crema-2));display:grid;place-items:center;color:var(--navy)}
 .pcard .pico svg{width:42px;height:42px}
 .tipo{display:inline-block;font:700 11.5px/1 "Poppins",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--naranja-osc);border-radius:6px;padding:5px 8px;margin-bottom:8px}
@@ -296,7 +300,7 @@ details[open] summary::before{content:"–"}
 .cat-desc h3{color:#fff;font-size:22px}
 .cat-desc p{margin:6px 0 0}
 .otros{margin:26px 0 0;color:var(--gris);font-size:15px}
-@media(max-width:820px){.pgrid{grid-template-columns:1fr}.pcard{padding:22px}.cat-desc{padding:24px}.cat-desc .btn{width:100%;justify-content:center}}
+@media(max-width:820px){.pimg{width:88px;height:88px}.pgrid{grid-template-columns:1fr}.pcard{padding:22px}.cat-desc{padding:24px}.cat-desc .btn{width:100%;justify-content:center}}
 
 .foto{margin:0}
 /* ---------- Comal Liso ---------- */
@@ -457,7 +461,7 @@ textarea:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 4px rgb
     <div class="pgrid" id="pgrid">
       <article class="pcard aparece" data-cat="conservadores">
         <div class="pc-top">
-          <div class="pico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6c7 0 11 9 11 20s-4 24-11 24-11-13-11-24 4-20 11-20Z" fill="#f8e2c3"/><path d="M26 16h12M24 24h16M24 32h16M25 40h14M32 8v40"/><path d="M21 30c-7 4-10 12-9 24 6-3 12-6 15-12M43 30c7 4 10 12 9 24-6-3-12-6-15-12" stroke="#f08414"/></svg></div>
+          <div class="pimg foto"><img src="img/tortillas-maiz.jpg" alt="Conservador para tortillas de maíz tipo MET-R" width="440" height="440" loading="lazy"></div>
           <div>
             <span class="tipo">Tipo MET-R</span>
             <h3>Conservador para tortillas de maíz</h3>
@@ -480,7 +484,7 @@ textarea:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 4px rgb
       </article>
       <article class="pcard aparece" data-cat="conservadores">
         <div class="pc-top">
-          <div class="pico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6c7 0 11 9 11 20s-4 24-11 24-11-13-11-24 4-20 11-20Z" fill="#f8e2c3"/><path d="M26 16h12M24 24h16M24 32h16M25 40h14M32 8v40"/><path d="M21 30c-7 4-10 12-9 24 6-3 12-6 15-12M43 30c7 4 10 12 9 24-6-3-12-6-15-12" stroke="#f08414"/></svg></div>
+          <div class="pimg foto"><img src="img/tortillas-maiz.jpg" alt="Conservador para tortillas de maíz tipo MER" width="440" height="440" loading="lazy"></div>
           <div>
             <span class="tipo">Tipo MER</span>
             <h3>Conservador para tortillas de maíz</h3>
@@ -503,7 +507,7 @@ textarea:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 4px rgb
       </article>
       <article class="pcard aparece" data-cat="conservadores">
         <div class="pc-top">
-          <div class="pico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 58V14"/><path d="M32 14c-4-2-6-6-5-10 4 1 6 5 5 10Zm0 0c4-2 6-6 5-10-4 1-6 5-5 10Z" fill="#f8e2c3"/><path d="M32 26c-6-1-10-5-10-10 6 0 10 4 10 10Zm0 0c6-1 10-5 10-10-6 0-10 4-10 10ZM32 38c-6-1-10-5-10-10 6 0 10 4 10 10Zm0 0c6-1 10-5 10-10-6 0-10 4-10 10ZM32 50c-6-1-10-5-10-10 6 0 10 4 10 10Zm0 0c6-1 10-5 10-10-6 0-10 4-10 10Z" fill="#f8e2c3" stroke="#f08414"/></svg></div>
+          <div class="pimg foto"><img src="img/tortillas-harina.jpg" alt="Conservador para productos de harina de trigo tipo MEGATOR" width="440" height="440" loading="lazy"></div>
           <div>
             <span class="tipo">Tipo MEGATOR</span>
             <h3>Conservador para productos de harina de trigo</h3>
@@ -526,7 +530,7 @@ textarea:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 4px rgb
       </article>
       <article class="pcard aparece" data-cat="mejoradores">
         <div class="pc-top">
-          <div class="pico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6c7 0 11 9 11 20s-4 24-11 24-11-13-11-24 4-20 11-20Z" fill="#f8e2c3"/><path d="M26 16h12M24 24h16M24 32h16M25 40h14M32 8v40"/><path d="M21 30c-7 4-10 12-9 24 6-3 12-6 15-12M43 30c7 4 10 12 9 24-6-3-12-6-15-12" stroke="#f08414"/></svg></div>
+          <div class="pimg foto"><img src="img/prod-maximasa.jpg" alt="Mejorador para nixtamalización tipo MAXIMASA" width="440" height="440" loading="lazy"></div>
           <div>
             <span class="tipo">Tipo MAXIMASA</span>
             <h3>Mejorador para nixtamalización</h3>
@@ -549,7 +553,7 @@ textarea:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 4px rgb
       </article>
       <article class="pcard aparece" data-cat="mejoradores">
         <div class="pc-top">
-          <div class="pico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6c7 0 11 9 11 20s-4 24-11 24-11-13-11-24 4-20 11-20Z" fill="#f8e2c3"/><path d="M26 16h12M24 24h16M24 32h16M25 40h14M32 8v40"/><path d="M21 30c-7 4-10 12-9 24 6-3 12-6 15-12M43 30c7 4 10 12 9 24-6-3-12-6-15-12" stroke="#f08414"/></svg></div>
+          <div class="pimg saco"><img src="img/prod-tmr.jpg" alt="Mejorador-texturizante para masas de maíz tipo TMR" width="440" height="440" loading="lazy"></div>
           <div>
             <span class="tipo">Tipo TMR</span>
             <h3>Mejorador-texturizante para masas de maíz</h3>
@@ -572,7 +576,7 @@ textarea:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 4px rgb
       </article>
       <article class="pcard aparece" data-cat="mejoradores">
         <div class="pc-top">
-          <div class="pico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 58V14"/><path d="M32 14c-4-2-6-6-5-10 4 1 6 5 5 10Zm0 0c4-2 6-6 5-10-4 1-6 5-5 10Z" fill="#f8e2c3"/><path d="M32 26c-6-1-10-5-10-10 6 0 10 4 10 10Zm0 0c6-1 10-5 10-10-6 0-10 4-10 10ZM32 38c-6-1-10-5-10-10 6 0 10 4 10 10Zm0 0c6-1 10-5 10-10-6 0-10 4-10 10ZM32 50c-6-1-10-5-10-10 6 0 10 4 10 10Zm0 0c6-1 10-5 10-10-6 0-10 4-10 10Z" fill="#f8e2c3" stroke="#f08414"/></svg></div>
+          <div class="pimg foto"><img src="img/tortillas-harina.jpg" alt="Mejorador especial para harina de trigo tipo THSE" width="440" height="440" loading="lazy"></div>
           <div>
             <span class="tipo">Tipo THSE</span>
             <h3>Mejorador especial para harina de trigo</h3>
@@ -595,7 +599,7 @@ textarea:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 4px rgb
       </article>
       <article class="pcard aparece" data-cat="mejoradores">
         <div class="pc-top">
-          <div class="pico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 58V14"/><path d="M32 14c-4-2-6-6-5-10 4 1 6 5 5 10Zm0 0c4-2 6-6 5-10-4 1-6 5-5 10Z" fill="#f8e2c3"/><path d="M32 26c-6-1-10-5-10-10 6 0 10 4 10 10Zm0 0c6-1 10-5 10-10-6 0-10 4-10 10ZM32 38c-6-1-10-5-10-10 6 0 10 4 10 10Zm0 0c6-1 10-5 10-10-6 0-10 4-10 10ZM32 50c-6-1-10-5-10-10 6 0 10 4 10 10Zm0 0c6-1 10-5 10-10-6 0-10 4-10 10Z" fill="#f8e2c3" stroke="#f08414"/></svg></div>
+          <div class="pimg saco"><img src="img/prod-phmex.jpg" alt="Polvo para hornear especial tipo PHMEX" width="440" height="440" loading="lazy"></div>
           <div>
             <span class="tipo">Tipo PHMEX</span>
             <h3>Polvo para hornear especial</h3>
@@ -618,7 +622,7 @@ textarea:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 4px rgb
       </article>
       <article class="pcard aparece" data-cat="desmoldantes">
         <div class="pc-top">
-          <div class="pico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="30" cy="38" rx="22" ry="8" fill="#f8e2c3"/><path d="M8 38v4c0 4.4 9.8 8 22 8s22-3.6 22-8v-4M52 38h8"/><path d="M22 28c0-4 4-4 4-8M30 26c0-4 4-4 4-8M38 28c0-4 4-4 4-8" stroke="#f08414"/></svg></div>
+          <div class="pimg saco"><img src="img/prod-tfc.jpg" alt="Antiadherente Tortiflón tipo TFC" width="440" height="440" loading="lazy"></div>
           <div>
             <span class="tipo">Tipo TFC</span>
             <h3>Antiadherente Tortiflón</h3>
@@ -641,7 +645,7 @@ textarea:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 4px rgb
       </article>
       <article class="pcard aparece" data-cat="desmoldantes">
         <div class="pc-top">
-          <div class="pico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="10" fill="#f8e2c3"/><path d="M32 8v8M32 48v8M8 32h8M48 32h8M15 15l6 6M43 43l6 6M15 49l6-6M43 21l6-6"/><circle cx="32" cy="32" r="3.5" fill="#f08414" stroke="#f08414"/></svg></div>
+          <div class="pimg saco"><img src="img/prod-grafito.jpg" alt="Lubricante grafitado tipo GRAFITO" width="440" height="440" loading="lazy"></div>
           <div>
             <span class="tipo">Tipo GRAFITO</span>
             <h3>Lubricante grafitado</h3>
