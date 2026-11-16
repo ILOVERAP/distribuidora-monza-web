@@ -328,6 +328,16 @@ details[open] summary::before{content:"–"}
 .nota-cert{text-align:center;font-size:13px;color:var(--gris);margin:22px auto 0;max-width:640px}
 @media(max-width:1000px){.sellos{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:560px){.sellos{grid-template-columns:1fr 1fr}}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.vcard h3{font-size:18px;margin:16px 0 6px}
+.vcard p{margin:0;color:var(--gris);font-size:15px}
+.vplay,.vframe{position:relative;display:block;width:100%;aspect-ratio:16/9;border:0;padding:0;border-radius:var(--radio);overflow:hidden;background:var(--navy);cursor:pointer;box-shadow:0 24px 44px -30px rgba(10,42,76,.7)}
+.vplay img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.vplay:hover img{transform:scale(1.05)}
+.vboton{position:absolute;inset:0;margin:auto;width:66px;height:66px;border-radius:50%;background:var(--naranja);display:grid;place-items:center;box-shadow:0 0 0 0 rgba(240,132,20,.6);animation:pulso 2.4s infinite}
+.vboton svg{width:28px;height:28px;margin-left:4px}
+.vframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media(max-width:900px){.vgrid{grid-template-columns:1fr;max-width:560px;margin:0 auto}}
 textarea{display:block;width:100%;margin-top:7px;border:1.5px solid var(--linea);border-radius:12px;padding:13px 14px;font:16px "Inter",sans-serif;color:var(--tinta);background:#fdfbf8;min-height:96px;resize:vertical}
 textarea:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 4px rgba(240,132,20,.15);background:#fff}
 </style>
@@ -344,6 +354,7 @@ textarea:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 4px rgb
       <a href="#nosotros">Quiénes somos</a>
       <a href="#productos">Productos</a>
       <a href="#comal-liso">Comal Liso</a>
+      <a href="#videos">Videos</a>
       <a href="#certificaciones">Calidad</a>
       <a href="#galeria">Galería</a>
       <a href="#contacto">Contacto</a>
@@ -711,32 +722,41 @@ textarea:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 4px rgb
 </section>
 
 <!-- ================= VIDEO ================= -->
-<!-- Pendiente: cuando el cliente mande el video, quitar este comentario.
-
-<section id="video">
+<section id="videos">
   <div class="cont">
     <div class="titulo centro aparece">
-      <span class="eti">Video</span>
+      <span class="eti">Videos</span>
       <h2>Véalo en acción</h2>
-      <p>Así se ve la diferencia en el proceso y en el producto final.</p>
+      <p>Videos oficiales de Mexenil sobre los productos que distribuimos en El Salvador.</p>
     </div>
-    <div class="video-caja aparece" id="video-caja">
-      <img class="marca-agua" src="img/emblema.png" alt="">
-      ( Cuando el cliente mande el video: borrar el bloque "sobre" y poner aquí
-           <video src="/video/presentacion.mp4" controls playsinline poster="/img/..."></video>
-           o el iframe de YouTube. )
-      <div class="sobre">
-        <div>
-          <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4v16l13-8z"/></svg></div>
-          <h3>Video de presentación</h3>
-          <p>Muy pronto en esta sección</p>
-        </div>
-      </div>
+    <div class="vgrid">
+      <article class="vcard aparece">
+        <button type="button" class="vplay" data-id="NouWCxJZ9s0" aria-label="Reproducir video: Maximasa: volviendo a lo tradicional">
+          <img src="https://i.ytimg.com/vi/NouWCxJZ9s0/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
+          <span class="vboton" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <h3>Maximasa: volviendo a lo tradicional</h3>
+        <p>Mejorador para nixtamalización que sustituye a la cal.</p>
+      </article>
+      <article class="vcard aparece">
+        <button type="button" class="vplay" data-id="4fLSywX86qo" aria-label="Reproducir video: Grafito ecológico Mexenil">
+          <img src="https://i.ytimg.com/vi/4fLSywX86qo/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
+          <span class="vboton" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <h3>Grafito ecológico Mexenil</h3>
+        <p>Lubricante grafitado para máquinas tortilladoras.</p>
+      </article>
+      <article class="vcard aparece">
+        <button type="button" class="vplay" data-id="nmQIEIZV1No" aria-label="Reproducir video: Sazonadores Mexenil">
+          <img src="https://i.ytimg.com/vi/nmQIEIZV1No/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
+          <span class="vboton" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <h3>Sazonadores Mexenil</h3>
+        <p>Sabores para snacks, botanas y productos horneados.</p>
+      </article>
     </div>
   </div>
 </section>
-
--->
 
 <!-- ================= GALERÍA ================= -->
 <section class="galeria" id="galeria">
@@ -823,6 +843,7 @@ textarea:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 4px rgb
         <p><a href="#nosotros">Quiénes somos</a></p>
         <p><a href="#productos">Productos</a></p>
         <p><a href="#comal-liso">Comal Liso</a></p>
+        <p><a href="#videos">Videos</a></p>
         <p><a href="catalogo-monza.pdf" download>Catálogo (PDF)</a></p>
         <p><a href="#galeria">Galería</a></p>
         <p><a href="#contacto">Contacto</a></p>
@@ -897,6 +918,12 @@ textarea:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 4px rgb
     }, 3800);
   }
 
+  // Videos: el reproductor de YouTube se carga solo al tocar (la página abre más rápido)
+  document.querySelectorAll(".vplay").forEach(function(b){ b.addEventListener("click", function(){
+    var d = document.createElement("div"); d.className = "vframe";
+    d.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + b.getAttribute("data-id") + '?autoplay=1&rel=0" title="' + b.getAttribute("aria-label").replace("Reproducir video: ","") + '" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    b.replaceWith(d);
+  }); });
   // Filtro de productos por categoría
   var tabs = document.querySelectorAll(".tab"), cards = document.querySelectorAll(".pcard");
   tabs.forEach(function(t){ t.addEventListener("click", function(){
